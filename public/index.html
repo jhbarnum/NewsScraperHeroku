@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Scraping With Mongoose</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/app.css" />
+  </head>
+  <body class>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid"> 
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Mongo Scraper</a> 
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="/">Home</a>
+          </li>
+          <!-- <li>
+            <a href="/saved">Saved Articles</a>
+          </li> -->
+          <li>
+            <a href="#saved">Saved Articles</a>
+
+          </li>
+          <li>
+            <a href="/scrape/">SCRAPE NEW ARTICLES!</a>  
+          </li> 
+        </ul>
+      </div> 
+    </nav>
+    <div class="jumbotron text-center">
+      <div class="overlay">
+        </div>
+      <div class="background-image">
+        </div>
+      <div class="caption">
+        <h1>Mongo Scraper</h1>
+        <p>NY Times</p>
+      </div>
+    </div>
+    <div id="wrapper">
+      <!-- <h1>Note Scraper</h1>
+      <h2><i>If you can do this...the homework should be no problem.</i></h2> -->
+      <div id="articles"></div>
+      <div id="notes"></div>
+       
+      <a name="saved"></a>
+
+      <div><h2>Saved Articles</h2></div>
+      <div id="saved"></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

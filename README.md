@@ -6,10 +6,7 @@ This app lets you find stories in the NY Times and save them to a Mongo DB for f
 
 ![StartGame](public/images/Notes.png)
 
-Start clicking away.
+Save Notes on your stories as well!
 
 ![StartGuessing](public/images/NYTimes.png)
 
-Get all twelve and you win!
-
-![GuessTwo](/readmeimages/YouWin.png)

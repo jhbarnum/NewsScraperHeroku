@@ -107,11 +107,7 @@ app.get("/saved", function (req, res) {
         // If an error occurred, send it to the client
         res.json(err);
       });
-    // var hbsObject = {
-    //   article: articles
-    // };
-    // res.render("saved", hbsObject);
-
+   
 });
 
 // Route for grabbing a specific Article by id, populate it with it's note
@@ -164,8 +160,23 @@ app.delete("/articles/:id", function (req, res) {
       res.json(err);
     });
 });
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// working saved!!!
+
+
+// GET to clear the database (used for testing purposes)
+app.get("/delete", function (req, res) {
+  db.Article.remove({})
+    .then(function () {
+      res.send("Cleared!");
+    })
+    .catch(function (err) {
+      res.json(err);
+    })
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 app.post("/saved/:id", function (req, res) {
   // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
   //db.Article.create(req.body)

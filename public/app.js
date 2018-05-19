@@ -109,7 +109,16 @@ $(document).on("click", "#delete", function () {
     });
 });
 
-
+// CLEAR DATABASE button clicked
+$(document).on("click", "#cleardb", function () {
+  $.ajax({
+    method: "GET",
+    url: "/delete"
+  })
+    .then(function () {
+      window.location = "/";
+    });
+});
 
 
 $.getJSON("/saved", function (data) {

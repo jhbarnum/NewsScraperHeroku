@@ -4,7 +4,7 @@ $.getJSON("/articles", function(data) {
   for (var i = 0; i < data.length; i++) {
    
     // Display the apropos information on the page
-    $("#articles").append("<p data-id='" + data[i]._id + "'>" + 
+    $("#articles").append("<p class='article' data-id='" + data[i]._id + "'>" + 
       data[i].title + "<br />" + 
       "<a href=" + data[i].link + "> " + data[i].link + "</a> " + "<br />" +
       "<button class='btn' id='noteBtn' data-id=" + data[i]._id + ">Article Notes</button>" +
@@ -117,6 +117,7 @@ $(document).on("click", "#cleardb", function () {
   })
     .then(function () {
       window.location = "/";
+      window.location.reload();
     });
 });
 
@@ -127,7 +128,7 @@ $.getJSON("/saved", function (data) {
   for (var i = 0; i < data.length; i++) {
   //for (var i = data.length; i > 0; i--) {
     // Display the apropos information on the page
-    $("#saved").append("<p data-id='" + data[i]._id + "'>" +
+    $("#saved").append("<p class='article' data-id='" + data[i]._id + "'>" +
       data[i].title + "<br />" +
       "<a href=" + data[i].link + "> " + data[i].link + "</a> " + "<br />" +
       "<button class='btn' id='noteBtn' data-id=" + data[i]._id + ">Article Notes</button>" +
